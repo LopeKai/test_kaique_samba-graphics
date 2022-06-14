@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500&family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+    --color-white: #fff;
+    --color-text: #808080;
+    --color-primary: #FAB52B;
+
+    --black-900: #000000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    scroll-behavior: smooth;
+}
+
+@media(max-width: 1080px) {
+    html {
+        font-size: 93.75%;
+    }
+}
+
+@media(max-width: 720px) {
+    html {
+        font-size: 85.5%;
+    }
+}
+
+body {
+    background-color: #000;
+    color: var(--color-white);
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    outline: none;
+}
+
+.container {
+    // border: 1px solid green;
+}
+
+/*----------- BUTTON HAMBURGUER ----------*/
+.hamburguer {
+    display: none;
+}
+
+@media(max-width: 1200px) {
+    .hamburguer {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        cursor: pointer;
+    
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #fff;
+            transition: 300ms;
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #fff;
+            transition: 300ms;
+        }
+
+        &.active {
+            &::before {
+                transform: rotate(45deg);
+                background-color: #fff;
+                transition: 300ms;
+            }   
+
+            &::after{
+                top: 0px;
+                transform: rotate(-45deg);
+                background-color: #fff;
+                transition: 300ms;
+            }
+        }
+    }
+}
