@@ -1,8 +1,42 @@
 .releases {
     width: 100%;
     height: 100%;
+    margin-top: 146px;
+
+    @media(max-width: 1200px) {
+        margin-top: 100px;
+    }
 
     &__container {
-        border: 1px solid blue;
+        max-width: 1400px ;
+        margin: 0 auto;
+
+        @media(max-width: 1440px) {
+            padding: 0 2rem;
+        }
+
+        @media(max-width: 1200px) {
+            padding: 0 2rem;
+        }
+
+        .title {
+            border-bottom: 1px solid hwb(0 50% 50% / 0.275);
+            padding-bottom: 30px;
+
+            h1 {
+                color: var(--color-primary);
+                font-size: 1.9rem;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+        }
+
+        .films {
+            margin-top: 96px;
+            border: 1px solid blue;
+
+            .films__container {
+            }
+        }
     }
 }
