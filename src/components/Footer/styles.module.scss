@@ -5,18 +5,196 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: 1px solid red;
+    font-family: 'Fira Sans', sans-serif;
+
+    @media(max-width: 1200px) {
+        height: 100%;
+    }
 
     &__container {
         max-width: 1700px;
         width: 100%;
-        margin: 0 auto;
+        margin: auto auto;
         flex: 1;
+        display: flex;
+        justify-content: center;
 
         @media(max-width: 1440px) {
-            padding: 0 2rem;
+            padding: 1.5rem 2rem;
         }
-        border: 1px solid blue;
+
+        .row {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            column-gap: 244px;
+
+            @media(max-width: 1200px) {
+                flex-direction: column;
+                row-gap: 30px;
+
+                .imgLogo {
+                    width: 20%;
+                }
+            }
+
+            .navegation {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                column-gap: 83px;
+
+                @media(max-width: 1200px) {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    row-gap: 30px;
+                    column-gap: 50px;
+                }
+
+                nav {
+                    ul {
+                        li + li{
+                            margin-top: 20px;
+                        }
+                        li {
+                            a {
+                                color: #fff;
+
+                                &:hover {
+                                    filter:brightness(0.8);
+                                }
+                            }
+                        }
+                    }
+                    @media(max-width: 1200px) {
+                        ul {
+                            li + li {
+                                margin-top: 15px;
+                            }
+                        }
+                    }
+                }
+
+                .social_network {
+                    nav {
+                        ul {
+                            li + li {
+                                margin-left: 30px;
+                            }
+                            li {
+                                display: inline-block;
+
+                                a {
+                                    display: inline-block;
+                                    transition: 300ms;
+                                    &:hover {
+                                        transform: scale(1.1);
+                                    }
+                                }
+
+                                @media(max-width: 1200px) {
+                                    a {
+                                        img {
+                                            width: 70%;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                    }
+
+                    .input {
+                        margin-top: 67px;
+
+                        .input_container {
+                            width: 262px;
+                            height: 44px;
+                            border-radius: 6px;
+                            background: #17161B;
+                            border: 1px solid var(--color-primary);
+                            display: flex;
+                            justify-content: space-between;
+                            margin-top: 15px;
+
+                            input {
+                                width: 85%;
+                                background: #17161B;
+                                margin-right: 5px;
+                                color: #fff;
+                                font-size: 1rem;
+                                padding: 0 .5rem;
+                                border: none;
+                                outline: none;
+                                border-radius: 6px;
+                            }
+
+                            button {
+                                width: 15%;
+                                height: 100%;
+                                cursor: pointer;
+                                background-color: transparent;
+                                
+                                svg {
+                                    font-size: 18px;
+                                    color: var(--color-primary);
+                                }
+                            }
+                        }
+
+                        @media(max-width: 1200px) {
+                            margin-top: 30px;
+
+                            .input_container {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+
+                .stores {
+                    ul {
+                        margin-top: 61px;
+
+                        li + li {
+                            margin-top: 27px;
+                        }
+
+                        li {
+                            a {
+                                display: inline-block;
+                                transition: 300ms;
+                                &:hover {
+                                    img {
+                                        transform: scale(1.1);
+                                        transition: 300ms;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    @media(max-width: 1200px) {
+                        ul {
+                            margin-top: 20px;
+
+                            li + li {
+                                margin-top: 15px;
+                            }
+
+                            li {
+                                a {
+                                    display: inline-block;
+                                    img {
+                                        width: 70%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 
     .copyright {
@@ -30,6 +208,15 @@
             font-family: 'Fira Sans', sans-serif;
             font-weight: 500;
             color: #17161B;
+        }
+
+        @media(max-width: 600px) {
+            padding: 0 1rem;
+
+            p {
+                font-size: 0.9rem;
+                text-align: center;
+            }
         }
     }
 }
