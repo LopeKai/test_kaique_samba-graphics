@@ -3,7 +3,7 @@
 </h1>
 <h2> Status: Finalizado! </h2>
 
-<p> Projeto desenvolvido para um vaga de Front-end.</p>
+<p> Projeto desenvolvido para uma vaga de Front-end.</p>
 
 <h2> Tecnologias: </h2>
 
