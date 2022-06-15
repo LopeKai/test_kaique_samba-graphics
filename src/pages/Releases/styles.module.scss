@@ -8,7 +8,7 @@
     }
 
     &__container {
-        max-width: 1400px ;
+        max-width: 1700px ;
         margin: 0 auto;
 
         @media(max-width: 1440px) {
@@ -33,9 +33,27 @@
 
         .films {
             margin-top: 96px;
-            border: 1px solid blue;
 
             .films__container {
+                .cards {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    grid-template-rows: repeat(2, 997px);
+                    column-gap: 12px;
+                    row-gap: 124px;
+
+                    @media(max-width: 1200px) {
+                        grid-template-columns: repeat(2, 1fr);
+                        grid-template-rows: repeat(2, 850px);
+                    }
+
+                    @media(max-width: 600px) {
+                        grid-template-columns: repeat(1,1fr);
+                        grid-template-rows: repeat(2, 900px);
+                        row-gap: 100px;
+                    }
+
+                }
             }
         }
     }

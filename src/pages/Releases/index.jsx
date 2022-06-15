@@ -1,4 +1,8 @@
+import { books } from '../../Data/books'
+import { Card } from '../../components/Card'
+
 import styles from './styles.module.scss'
+
 export function Releases() {
     return (
         <div className={styles.releases}>
@@ -9,9 +13,23 @@ export function Releases() {
                 <div className={styles.films}>
                     <div className={styles.films__container}>
                         <div className={styles.cards}>
-                            <div className={styles.cards}>
-                                
-                            </div>
+                            {
+                                books.map((book) => {
+                                    return (
+                                        <Card 
+                                            name={book.name}
+                                            author={book.author}
+                                            description={book.description}
+                                            year={book.year}
+                                            price={book.price}
+                                            category={book.category}
+                                            star={book.star}
+                                            comment={book.comment}
+                                            age={book.age}
+                                        />
+                                    )
+                                })
+                            }
                         </div>
                     </div>
                 </div>
