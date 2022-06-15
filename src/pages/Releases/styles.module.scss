@@ -55,3 +55,158 @@
         }
     }
 }
+/*---------- MODAL ---------*/
+.modal {
+    .expander__card{
+        width: 90vw;
+        height: 90vh;
+        border: 1px solid #000;
+        box-shadow: 0 0 5px #fff;;
+        border-radius: 8px;
+
+        @media(max-width: 800px) {
+            width: 92vw;
+            height: 92vh;
+        }
+
+        .expander__content {
+            height: 100%;
+            display: flex;
+            
+            .details {
+                flex-basis: 30%;
+                border-right: 1px solid hwb(0 50% 50%/0.275);
+
+                &__container {
+                    padding: 1rem;
+                    display: flex;
+                    flex-direction: column;
+
+                    > img {
+                        display: block;
+                        width: 100%;
+                    }
+
+                    .data {
+                        margin-top: 2rem;
+                        padding-top: 1rem;
+                        border-top: 1px solid hwb(0 50% 50%/0.275);
+
+                        > div {
+                            margin-bottom: 1rem;
+
+                            p {
+                                display: inline-block;
+                                margin-left: 1rem;
+                                color: var(--color-text);
+
+                                span {
+                                    color: #fff;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                @media(max-width: 800px) {
+                    flex-basis: 40%;
+
+                    &__container {
+                        padding: 0rem;
+                     
+                        .data {
+                            padding: 0 .5rem;
+                            padding-top: 1rem;
+    
+                            > div {
+                                margin-bottom: 2.5rem;
+                                display: flex;
+    
+                                p {
+                                    margin-left: 0.7rem;
+                                }
+
+                                svg {
+                                    font-size: 1.2rem;
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            .description {
+                flex-basis: 70%;
+
+                &__container {
+                    position: relative;
+                    height: 100%;
+                    padding: 2rem;
+                    padding-top: 5rem;
+
+                    button.close {
+                        position: absolute;
+                        top: 0.6rem;
+                        right: 0.6rem;
+                        border: none;
+                        background-color: transparent;
+                        cursor: pointer;
+                        transition: 300ms;
+                        
+                        svg {
+                            font-size: 4rem;
+                            color: var(--color-primary);
+                        }
+
+                        &:hover {
+                            filter: brightness(0.9);
+                            transform: scale(0.95);
+                            transition: 300ms;
+                        }
+                    }
+
+                    .title {
+                        text-align: center;
+                        text-transform: uppercase;
+                    }
+
+                    .text {
+                        max-width: 80%;
+                        margin-top: 2rem;
+
+                        p {
+                            line-height: 2.2rem;
+                        }
+                    }
+                }
+
+                @media(max-width: 800px) {
+                    flex-basis: 60%;
+
+                    &__container {
+                        padding: 1rem;
+                        padding-top: 9rem;
+    
+                        button.close {
+                            top: 0.2rem;
+                            right: 0.2rem;
+                            
+                            svg {
+                                font-size: 3rem;
+                            }
+                        }
+    
+                        .title {
+                            font-size: 1.1rem;
+                        }
+    
+                        .text {
+                            max-width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,4 +1,5 @@
-import {useState} from 'react'
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 import Logo from '../../images/Group3.svg'
 import { FiSearch } from 'react-icons/fi'
@@ -26,12 +27,13 @@ export function Header() {
                     <nav>
                         <ul>
                             <li>
-                                <a href="#">Home</a>
+                                <Link to="/">Home</Link>
                             </li>
                             <li>
-                                <a href="#">Gêneros</a>
-                            </li><li>
-                                <a href="#">Alterar idioma</a>
+                                <Link to="/">Gêneros</Link>
+                            </li>
+                            <li>
+                                <Link to="/">Alterar idioma</Link>
                             </li>
                         </ul>
                     </nav>

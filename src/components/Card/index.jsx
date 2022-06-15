@@ -56,7 +56,7 @@ export function Card(props) {
                     </div>
                 </div>
                 <div className={styles.readNow}>
-                    <button >
+                    <button onClick={() => props.expander(props.id)}>
                         Leia Agora
                     </button>
                     <div className={styles.price}>
