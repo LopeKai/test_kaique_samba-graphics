@@ -14,7 +14,7 @@ export const books = [
     {
         id: 2,
         name: 'Inite',
-        author: 'Clarice Lispecto',
+        author: 'Clarice Lispector',
         description: "Esse clássico vai conseguir relatar como um simples pescador, conseguiu riqueza no fundo do oceano...",
         year: '2010',
         price: '1,99',

@@ -47,8 +47,7 @@
             }
         }
         .description {
-            margin: 42px 0 50px;
-            border: 1px solid red;
+            margin: 42px 0 45px;
 
             .description_name {
                 display: flex;
@@ -77,7 +76,8 @@
             }
 
             .description_text {
-                border: 1px solid red;
+                height: 8rem;
+
                 p {
                     font-size: 1.7rem;
                     font-weight: 300;
@@ -130,9 +130,10 @@
             align-items: center;
             justify-content: space-between;
 
-            @media(max-width: 870px) {
+            @media(max-width: 1350px) {
                 flex-direction: column;
                 gap: 15px;
+                flex-flow: column-reverse;
             }
 
             button {

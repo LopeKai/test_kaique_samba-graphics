@@ -6,7 +6,6 @@ import imgClose from '../../images/icon-close.svg'
 import imgComment from '../../images/icon-comment.svg'
 import imgAge from '../../images/icon-age.svg'
 
-
 import styles from './styles.module.scss'
 
 export function Card(props) {
